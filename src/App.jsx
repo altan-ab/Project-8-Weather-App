@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 
-const apiKey = '71399ef0a638768eeae2154a8e745422'
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY
+// console.log('API Key:', apiKey)
 
 const App = () => {
   const cityInputRef = useRef(null) // Şehir input referansı
@@ -31,7 +32,8 @@ const App = () => {
     setCityName(inputCity)
   }
 
-  //   console.log(weatherData)
+  // console.log(weatherData)
+  // console.log(process.env)
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
